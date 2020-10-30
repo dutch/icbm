@@ -3,6 +3,7 @@ AC_INIT([icbm],
 [chris@lamberson.online])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([m4])
+AC_CONFIG_TESTDIR([tests])
 AM_INIT_AUTOMAKE([foreign tar-pax dist-xz no-dist-gzip subdir-objects])
 AM_PROG_AR
 LT_INIT

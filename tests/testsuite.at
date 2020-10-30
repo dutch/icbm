@@ -1,0 +1,4 @@
+AT_INIT
+AT_SETUP([General])
+AT_CHECK([/usr/bin/true])
+AT_CLEANUP

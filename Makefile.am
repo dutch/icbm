@@ -11,3 +11,4 @@ dist-hook:
 include $(srcdir)/lib/Makefile.inc
 include $(srcdir)/src/Makefile.inc
 include $(srcdir)/include/Makefile.inc
+include $(srcdir)/tests/Makefile.inc
