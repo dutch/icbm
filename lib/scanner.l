@@ -3,12 +3,9 @@
 #include <string.h>
 %}
 %%
-[0-9]+ { yylval.ival = atoi(yytext); return NUMBER; }
-\n
-[ \t]+
+=> { return LINK; }
+[A-Za-z]+ { yylval.sval = strdup(yytext); return STRING; }
+\n { return NEWLINE; }
+[ \t]+ { return SPACE; }
 %%
-int
-yywrap(void)
-{
-  return 1;
-}
+int yywrap(void) { return 1; }

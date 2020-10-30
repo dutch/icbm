@@ -8,8 +8,21 @@ void yyerror(const char *);
   int ival;
   char *sval;
 }
-%token <ival> NUMBER
+%token LINK SPACE NEWLINE
 %token <sval> STRING
 %%
-numbers: | numbers number;
-number: NUMBER { puts("got a number"); };
+lines: | lines line;
+
+line: link NEWLINE;
+
+link: prelink STRING
+    | prelink STRING SPACE strings
+    ;
+
+prelink: LINK
+       | LINK SPACE
+       ;
+
+strings: STRING
+       | strings SPACE STRING
+       ;
