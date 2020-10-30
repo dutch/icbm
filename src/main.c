@@ -11,7 +11,7 @@ main(int argc, char **argv)
   while ((ch = getopt(argc, argv, ":v")) != -1) {
     switch (ch) {
     case 'v':
-      fputs(getverstr(), stderr);
+      fprintf(stderr, "%s\n", getverstr());
       break;
     }
   }
