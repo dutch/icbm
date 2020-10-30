@@ -16,5 +16,7 @@ main(int argc, char **argv)
     }
   }
 
+  parse("42 56\0\0");
+
   return EXIT_SUCCESS;
 }
