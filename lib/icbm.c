@@ -1,5 +1,8 @@
 #include "config.h"
+#include "parser.h"
 #include <icbm.h>
+
+extern int yyparse(void);
 
 const char *
 getverstr(void)
@@ -10,5 +13,5 @@ getverstr(void)
 void
 parse(const char *src)
 {
-  scan_string(src);
+  yyparse();
 }
