@@ -12,17 +12,8 @@ void yyerror(const char *);
 %token <sval> STRING
 %%
 lines: | lines line;
-
 line: link NEWLINE;
-
-link: prelink STRING
-    | prelink STRING SPACE strings
-    ;
-
-prelink: LINK
-       | LINK SPACE
-       ;
-
-strings: STRING
-       | strings SPACE STRING
-       ;
+link: LINK maybe_space STRING maybe_strings;
+maybe_space: | SPACE;
+maybe_strings: | strings;
+strings: STRING | STRING strings;

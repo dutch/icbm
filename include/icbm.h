@@ -3,5 +3,6 @@
 
 const char *getverstr(void);
 void parse(const char *);
+int icbm_get(const char *);
 
 #endif

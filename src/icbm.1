@@ -1,0 +1,33 @@
+.Dd November 1, 2020
+.Os
+.Dt ICBM 1
+.Sh NAME
+.Nm icbm
+.Nd a small gemini client
+.Sh SYNOPSIS
+.Nm
+.Op Fl v
+.Bk
+.Op Fl p Ar port
+.Ek
+.Ar url
+.Sh DESCRIPTION
+Fetch
+.Ar url
+and process it.
+.Pp
+Available options:
+.Bl -tag -offset indent -width ".Fl p Ar port" -compact
+.It Fl v
+Enable verbose mode
+.It Fl p Ar port
+Connect to
+.Ar port
+.El
+.Sh ENVIRONMENT
+.Bl -tag -width ".Ev ICBM_VERBOSE" -compact
+.It Ev ICBM_VERBOSE
+Enable verbose mode
+.It Ev ICBM_PORT
+Port to connect to
+.El
